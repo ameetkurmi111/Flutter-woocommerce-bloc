@@ -30,12 +30,11 @@ Future<List> fetchWpPosts(BuildContext context) async {
   int limit = 3;
   var countBlank = 0;
 
-//   final response = await http.get('https://aashish-liefer.de/wp-json/wc/v3/products/?per_page=100&consumer_key=ck_3b026cc7bda15b2e796a01215e3da509f402a9c9&consumer_secret=cs_b10c38760cef2e47d7e9db3dbe22f1ebe653df21');
-//  convertDatatoJson = jsonDecode(response.body);
+
   try {
     for (int i = 1; i < limit; i++) {
       response = await http.get(
-          'https://cocoliebe.com/wp-json/wc/v3/products/?per_page=100&page=$i&orderby=date&consumer_key=ck_bd2cae037b7712979971069d6d8c6cc1d39cf627&consumer_secret=cs_59911e6daedbef45153c88712b209beab10f9ba9');
+          '');
 
       if (response.body == "[]" && response.statusCode == 200) {
         countBlank += 1;
@@ -136,7 +135,7 @@ Future<List> fetchWpCategoriesList() async {
 
   try {
     final response = await http.get(
-        'https://cocoliebe.com/wp-json/wc/v3/products/categories?per_page=100&consumer_key=ck_bd2cae037b7712979971069d6d8c6cc1d39cf627&consumer_secret=cs_59911e6daedbef45153c88712b209beab10f9ba9');
+        '');
     var convertDatatoJson = jsonDecode(response.body);
 
     var dj;
@@ -293,7 +292,7 @@ Future<OrderModel> createOrder(
     }
 
     final http.Response response = await http.post(
-      'https://cocoliebe.com/wp-json/wc/v3/orders?per_page=100&consumer_key=ck_bd2cae037b7712979971069d6d8c6cc1d39cf627&consumer_secret=cs_59911e6daedbef45153c88712b209beab10f9ba9&status=processing',
+      '',
       headers: <String, String>{
         'Content-Type': 'application/json; charset=UTF-8',
       },
@@ -385,7 +384,7 @@ Future<List<Ordermodel>> getData(context) async {
   try {
     for (int i = 1; i < 6; i++) {
       orderResponse = await http.get(
-          "https://cocoliebe.com/wp-json/wc/v3/orders?per_page=100&page=$i&consumer_key=ck_bd2cae037b7712979971069d6d8c6cc1d39cf627&consumer_secret=cs_59911e6daedbef45153c88712b209beab10f9ba9&customer=$customerID");
+          "");
       if (orderResponse.statusCode != 400) {
         var decoded = jsonDecode(orderResponse.body);
         decoded
