@@ -13,15 +13,15 @@ class PaypalServices {
 
   // for testing
   String clientId =
-      'AenhAGbidtWQITyKfKY0epVN1g6Q1L7IYBunCS2lVbaM-sPIScjsVp9GvbIrfiEhCYR6osP10XIMHSrE';
+      '';
   String secret =
-      'EEAKVuSYOsR8MLCm0A_Y_u3dmBo0dFqjNyzXBnLQXgBnrZSpzzSFeysmU9jWPjcziOE77aZ-wEkOFJ5v';
+      '';
 
 //for real
   // String clientId =
-  //     'AftVSZMPUh0i1ob6rHpq6ny2EFIjf0sfZ54TfBr0IfNrvnbHntsFpYYHGqY1BdZuARAgKh33BSoysLs0';
+  //     '';
   // String secret =
-  //     'EPgwci2W7_gRI3Y7lmu09Lbz39gqhkAHYLPhPuY07gO7xaYzQlDiFxmgcG_06en4WNGR6pzlRiW93naC';
+  //     '';
 
   // for getting the access token from Paypal
   Future<String> getAccessToken() async {
