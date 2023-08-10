@@ -1,0 +1,24 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item
+        android:width="300dp"
+        android:height="300dp"
+        android:gravity="center"
+        >
+        <bitmap
+            android:src="@drawable/launch" />
+    </item>
+
+    <item  android:bottom="20dp">
+        <bitmap
+            android:gravity="bottom"
+            android:src="@drawable/lunchlogo" />
+    </item>
+    
+      <!-- You can insert your own image assets here -->
+    <!-- <item>
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/launch_image" />
+    </item> -->
+</layer-list>
